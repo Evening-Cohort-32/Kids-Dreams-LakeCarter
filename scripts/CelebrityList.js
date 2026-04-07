@@ -1,20 +1,20 @@
-import { getCelebrities } from "./database.js"
+import { getCelebrities } from "./database.js";
 
-const celebrities = getCelebrities()
+const celebrities = getCelebrities();
 
 export const Celebrities = () => {
-    let html = "<ol>"
+  let html = "<ol>";
 
-    for (const star of celebrities) {
-        html += `<li 
+  for (const celebrity of celebrities) {
+    html += `<li 
                     data-id="${celebrity.id}" 
                     data-type="celebrity"
-                    data-sport="${celebrty.sport}"
+                    data-sport="${celebrity.sport}"
                     id="star--${celebrity.id}">
                     ${celebrity.name}
-                </li>`
-    }
+                </li>`;
+  }
 
-    html += "</ol>"
-    return html
-}
+  html += "</ol>";
+  return html;
+};
