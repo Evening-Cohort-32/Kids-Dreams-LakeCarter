@@ -6,7 +6,12 @@ export const Kids = () => {
   let html = "<ol>";
 
   for (const child of children) {
-    html += `<li data-id="${child.id}" data-type="child" data-wish="${child.wish}">${child.name}</li>`;
+    html += `<li 
+    data-id="${child.id}" 
+    data-type="child" 
+    data-wish="${child.wish}"
+    data-name ="${child.name}"
+    >${child.name}</li>`;
   }
 
   html += "</ol>";
@@ -17,12 +22,7 @@ export const Kids = () => {
 document.addEventListener("click", (clickEvent) => {
   const clicked = clickEvent.target;
   if (clicked.dataset.type === "child") {
-    let clickedKid = null;
-    for (const child of children) {
-      if (parseInt(clicked.dataset.id) === child.id) {
-        clickedKid = child;
-        debugger;
-      }
-    }
+    let clickedKid = { name: clicked.dataset.name, wish: clicked.dataset.wish };
+    window.alert(`${clickedKid.name}'s wish is ${clickedKid.wish}`);
   }
 });
