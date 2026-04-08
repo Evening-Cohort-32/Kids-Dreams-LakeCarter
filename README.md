@@ -47,14 +47,14 @@ Before you click the "Complete Assessment" button on the Learning Platform, add 
 3. In the **CelebrityList** module, can you describe how the name of the sport that the celebrity plays can be displayed in the window alert text?
 
    > We can display the name of the sport but using the data attribute of the <li> HTML element.
-   > By assigning `${celebrity.sport}` to a data attribute we can pull this information later using the click EventListener's target and use it in the window alert text.
+   By assigning `${celebrity.sport}` to a data attribute we can pull this information later using the click EventListener's target and use it in the window alert text.
 
 4. Can you describe, in detail, the algorithm that is in the `main` module?
 
    > First the variable mainContainer is created and assigned the value of the HTML element that is under the "container" class.
-   > Then the variable applicationHTML is created that will have our main HTML string as its value.
-   > This HTML string is created with two different articles.
-   > One article has two sections for both the kids and celebrities lists. Each of these sections invoke their respective functions,`Kids()` and `Celebrities()`, which return the HTML string for that list.
+   Then the variable applicationHTML is created that will have our main HTML string as its value.
+   This HTML string is created with two different articles.
+   One article has two sections for both the kids and celebrities lists. Each of these sections invoke their respective functions,`Kids()` and `Celebrities()`, which return the HTML string for that list.
 
    The other article is for our list of pairings. The articles HTML is also created by invoking a function. In this case when the `Pairings()` function is invoked the two arrays containing all the kids and all the celebrities are iterated through with the help of the `findCelebrityMatch()` function. The celebrityId numbers of each kid is compared against each celebrity's ID number. When a match is found the corresponding kid's celebrity is then returned as an object and assigned as the value of the variable kidsStar.
    A <li> element is then added to the HTML variable with the The kid's and kidsStar's information added into the pairing template's placeholders ${} for the needed information.

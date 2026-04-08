@@ -1,8 +1,8 @@
-import { Pairings } from "./Pairings.js"
-import { Celebrities } from "./CelebrityList.js"
-import { Kids } from "./Kids.js"
+import { Pairings } from "./Pairings.js";
+import { Celebrities } from "./CelebrityList.js";
+import { Kids } from "./Kids.js";
 
-const mainContainer = document.querySelector("#container")
+const mainContainer = document.querySelector("#container");
 
 const applicationHTML = `
     <h1>Make a Memory for Kids</h1>
@@ -21,7 +21,6 @@ const applicationHTML = `
         <h2>Pairings</h2>
         ${Pairings()}
     </article>
-`
+`;
 
-mainContainer.innerHTML = applicationHTML
-
+mainContainer.innerHTML = applicationHTML;
